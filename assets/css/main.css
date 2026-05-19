@@ -186,6 +186,11 @@ p {
   color: var(--color-secondary);
 }
 
+.custom-logo {
+  height: 80px;
+  width: auto;
+}
+
 /* =============================================
    NAV
    ============================================= */
@@ -697,7 +702,7 @@ p {
 }
 
 .footer-logo img {
-  height: 44px;
+  height: 60px;
   filter: brightness(0) invert(1);
 }
 

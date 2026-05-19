@@ -68,9 +68,8 @@ get_header(); ?>
                     <?php if ($ente) : ?>
                         <p class="cert-card__desc">Rilasciato da: <?php echo esc_html($ente); ?></p>
                     <?php endif; ?>
-                    <?php the_content(); ?>
                     <?php if ($file_pdf) : ?>
-                        <a href="<?php echo esc_url($file_pdf['url']); ?>" class="cert-card__link" target="_blank" rel="noopener">
+                        <a href="<?php echo esc_url($file_pdf); ?>" class="cert-card__link" target="_blank" rel="noopener">
                             📥 Scarica PDF
                         </a>
                     <?php endif; ?>

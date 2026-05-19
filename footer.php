@@ -55,7 +55,7 @@
                 <a href="<?php echo home_url('/privacy-policy'); ?>">Privacy Policy</a> &nbsp;|&nbsp;
                 <a href="<?php echo home_url('/cookie-policy'); ?>">Cookie Policy</a>
             </span>
-            <span>Sviluppato da <a href="https://longomichele.it" target="_blank" rel="noopener">Michele Longo</a></span>
+            
         </div>
 
     </div>
