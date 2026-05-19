@@ -79,27 +79,91 @@ $cat_name = ($cats && !is_wp_error($cats)) ? $cats[0]->name : '';
 
         </div>
 
-<!-- Galleria -->
-<?php
-$content = get_the_content();
-if (has_blocks($content)) {
-    $blocks = parse_blocks($content);
-    foreach ($blocks as $block) {
-        if ($block['blockName'] === 'core/gallery') {
-            echo '<div style="margin-top: 64px;">';
-            echo '<div class="section__header"><h2 class="section__title">Galleria</h2></div>';
-            echo '<div class="lavoro-single__gallery">';
-            foreach ($block['innerBlocks'] as $img_block) {
-                $id  = $img_block['attrs']['id'] ?? 0;
-                $src = $id ? wp_get_attachment_image_url($id, 'large') : '';
-                if ($src) echo '<div class="lavoro-single__gallery-item"><img src="' . esc_url($src) . '"></div>';
+        <!-- Galleria con lightbox -->
+        <?php
+        $content = get_the_content();
+        $gallery_images = [];
+
+        if (has_blocks($content)) {
+            $blocks = parse_blocks($content);
+            foreach ($blocks as $block) {
+                if ($block['blockName'] === 'core/gallery') {
+                    foreach ($block['innerBlocks'] as $img_block) {
+                        $id  = $img_block['attrs']['id'] ?? 0;
+                        $src = $id ? wp_get_attachment_image_url($id, 'large') : '';
+                        $alt = $id ? get_post_meta($id, '_wp_attachment_image_alt', true) : '';
+                        if ($src) $gallery_images[] = ['src' => $src, 'alt' => $alt];
+                    }
+                    break;
+                }
             }
-            echo '</div></div>';
-            break;
         }
-    }
-}
-?>
+
+        if (!empty($gallery_images)) : ?>
+        <div style="margin-top: 64px;">
+            <div class="section__header">
+                <h2 class="section__title">Galleria</h2>
+            </div>
+            <div class="lavoro-single__gallery">
+                <?php foreach ($gallery_images as $i => $img) : ?>
+                <div class="lavoro-single__gallery-item" onclick="openLightbox(<?php echo $i; ?>)">
+                    <img src="<?php echo esc_url($img['src']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+                    <div class="gallery-overlay">
+                        <span>&#128269;</span>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+            <button class="lightbox__close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox__prev" onclick="changeLightbox(-1)">&#8592;</button>
+            <button class="lightbox__next" onclick="changeLightbox(1)">&#8594;</button>
+            <div class="lightbox__content">
+                <img id="lightbox-img" src="" alt="">
+                <div class="lightbox__counter" id="lightbox-counter"></div>
+            </div>
+        </div>
+
+        <script>
+        const galleryImages = <?php echo json_encode($gallery_images); ?>;
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox').classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(e) {
+            if (e && e.target !== document.getElementById('lightbox')) return;
+            document.getElementById('lightbox').classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        function changeLightbox(dir) {
+            currentIndex = (currentIndex + dir + galleryImages.length) % galleryImages.length;
+            updateLightbox();
+        }
+
+        function updateLightbox() {
+            document.getElementById('lightbox-img').src = galleryImages[currentIndex].src;
+            document.getElementById('lightbox-img').alt = galleryImages[currentIndex].alt;
+            document.getElementById('lightbox-counter').textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const lb = document.getElementById('lightbox');
+            if (!lb.classList.contains('is-open')) return;
+            if (e.key === 'ArrowLeft') changeLightbox(-1);
+            if (e.key === 'ArrowRight') changeLightbox(1);
+            if (e.key === 'Escape') { lb.classList.remove('is-open'); document.body.style.overflow = ''; }
+        });
+        </script>
+        <?php endif; ?>
 
         <!-- Lavori correlati -->
         <?php
