@@ -17,7 +17,7 @@ $cat_name = ($cats && !is_wp_error($cats)) ? $cats[0]->name : '';
         <nav style="margin-bottom: 32px; font-size: 0.9rem; color: var(--color-gray);">
             <a href="<?php echo home_url('/'); ?>">Home</a>
             <span style="margin: 0 8px;">›</span>
-            <a href="<?php echo home_url('/i-lavori'); ?>">Lavori</a>
+            <a href="<?php echo home_url('/lavori'); ?>">Lavori</a>
             <span style="margin: 0 8px;">›</span>
             <span><?php the_title(); ?></span>
         </nav>
@@ -71,7 +71,7 @@ $cat_name = ($cats && !is_wp_error($cats)) ? $cats[0]->name : '';
                 </div>
                 <?php endif; ?>
 
-                <a href="<?php echo home_url('/i-lavori'); ?>" class="btn btn--dark" style="margin-top: 32px;">
+                <a href="<?php echo home_url('/lavori'); ?>" class="btn btn--dark" style="margin-top: 32px;">
                     ← Torna ai Lavori
                 </a>
 

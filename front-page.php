@@ -17,7 +17,7 @@
             </p>
             <div class="hero__actions">
                 <a href="<?php echo home_url('/contatti'); ?>" class="btn btn--primary">Richiedi Preventivo</a>
-                <a href="<?php echo home_url('/i-lavori'); ?>" class="btn btn--outline">Vedi i Nostri Lavori</a>
+                <a href="<?php echo home_url('/lavori'); ?>" class="btn btn--outline">Vedi i Nostri Lavori</a>
             </div>
         </div>
     </div>
@@ -126,7 +126,7 @@
         </div>
 
         <div style="text-align:center; margin-top:48px;">
-            <a href="<?php echo home_url('/i-lavori'); ?>" class="btn btn--dark">Vedi Tutti i Lavori</a>
+            <a href="<?php echo home_url('/lavori'); ?>" class="btn btn--dark">Vedi Tutti i Lavori</a>
         </div>
     </div>
 </section>

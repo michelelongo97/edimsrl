@@ -31,7 +31,7 @@
                     echo '<ul>
                         <li><a href="' . home_url('/') . '">Home</a></li>
                         <li><a href="' . home_url('/chi-siamo') . '">Chi Siamo</a></li>
-                        <li><a href="' . home_url('/i-lavori') . '">Lavori</a></li>
+                        <li><a href="' . home_url('/lavori') . '">Lavori</a></li>
                         <li><a href="' . home_url('/certificazioni') . '">Certificazioni</a></li>
                         <li><a href="' . home_url('/contatti') . '" class="nav-cta">Preventivo</a></li>
                     </ul>';

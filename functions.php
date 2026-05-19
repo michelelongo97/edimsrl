@@ -61,8 +61,8 @@ function edimsrl_register_cpt_lavori() {
     $args = [
         'labels'             => $labels,
         'public'             => true,
-        'has_archive'        => true,
-        'rewrite'            => ['slug' => 'portfolio-lavori'],
+        'has_archive'        => false,
+        'rewrite'            => ['slug' => 'lavori', 'with_front' => false],
         'supports'           => ['title', 'thumbnail', 'excerpt', 'editor'],
         'menu_icon'          => 'dashicons-building',
         'show_in_rest'       => true,

@@ -35,7 +35,7 @@
                 <ul>
                     <li><a href="<?php echo home_url('/'); ?>">Home</a></li>
                     <li><a href="<?php echo home_url('/chi-siamo'); ?>">Chi Siamo</a></li>
-                    <li><a href="<?php echo home_url('/i-lavori'); ?>">I Nostri Lavori</a></li>
+                    <li><a href="<?php echo home_url('/lavori'); ?>">I Nostri Lavori</a></li>
                     <li><a href="<?php echo home_url('/certificazioni'); ?>">Certificazioni</a></li>
                     <li><a href="<?php echo home_url('/contatti'); ?>">Richiedi Preventivo</a></li>
                 </ul>
