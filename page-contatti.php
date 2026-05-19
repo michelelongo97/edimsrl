@@ -60,7 +60,7 @@ get_header(); ?>
         <!-- Mappa Google -->
         <div class="map-wrapper">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003!2d16.4189!3d40.8179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ5JzA0LjQiTiAxNsKwMjUnMDguMCJF!5e0!3m2!1sit!2sit!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.5316438709774!2d16.425929511922952!3d40.816284731104815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13387bf7863de7e7%3A0xc1d4a922d12f9106!2sEdim%20Srl!5e0!3m2!1sit!2sus!4v1779187759627!5m2!1sit!2sus"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"

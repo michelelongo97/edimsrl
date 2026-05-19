@@ -79,32 +79,27 @@ $cat_name = ($cats && !is_wp_error($cats)) ? $cats[0]->name : '';
 
         </div>
 
-        <!-- Galleria immagini allegate al post -->
-        <?php
-        $immagini = get_attached_media('image', get_the_ID());
-        // Rimuovi immagine in evidenza dalla galleria
-        $thumbnail_id = get_post_thumbnail_id(get_the_ID());
-        if ($thumbnail_id) {
-            unset($immagini[$thumbnail_id]);
+<!-- Galleria -->
+<?php
+$content = get_the_content();
+if (has_blocks($content)) {
+    $blocks = parse_blocks($content);
+    foreach ($blocks as $block) {
+        if ($block['blockName'] === 'core/gallery') {
+            echo '<div style="margin-top: 64px;">';
+            echo '<div class="section__header"><h2 class="section__title">Galleria</h2></div>';
+            echo '<div class="lavoro-single__gallery">';
+            foreach ($block['innerBlocks'] as $img_block) {
+                $id  = $img_block['attrs']['id'] ?? 0;
+                $src = $id ? wp_get_attachment_image_url($id, 'large') : '';
+                if ($src) echo '<div class="lavoro-single__gallery-item"><img src="' . esc_url($src) . '"></div>';
+            }
+            echo '</div></div>';
+            break;
         }
-
-        if (!empty($immagini)) : ?>
-        <div style="margin-top: 64px;">
-            <div class="section__header">
-                <h2 class="section__title">Galleria</h2>
-            </div>
-            <div class="lavoro-single__gallery">
-                <?php foreach ($immagini as $img) :
-                    $src = wp_get_attachment_image_url($img->ID, 'large');
-                    $alt = get_post_meta($img->ID, '_wp_attachment_image_alt', true) ?: get_the_title($img->ID);
-                ?>
-                <div class="lavoro-single__gallery-item">
-                    <img src="<?php echo esc_url($src); ?>" alt="<?php echo esc_attr($alt); ?>">
-                </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
-        <?php endif; ?>
+    }
+}
+?>
 
         <!-- Lavori correlati -->
         <?php

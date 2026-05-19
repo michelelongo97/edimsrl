@@ -18,11 +18,15 @@
                     Opere edili, stradali e installazione impianti.<br>
                     Qualità e affidabilità dal 2007.
                 </p>
+
+                <!-- =============================================
                 <div class="footer-social">
                     <a href="#" aria-label="Facebook">f</a>
                     <a href="#" aria-label="LinkedIn">in</a>
                     <a href="#" aria-label="Instagram">ig</a>
                 </div>
+                ============================================= -->
+                
             </div>
 
             <!-- Col 2: Link rapidi -->

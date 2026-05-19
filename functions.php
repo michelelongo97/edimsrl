@@ -63,7 +63,7 @@ function edimsrl_register_cpt_lavori() {
         'public'             => true,
         'has_archive'        => true,
         'rewrite'            => ['slug' => 'portfolio-lavori'],
-        'supports'           => ['title', 'thumbnail', 'excerpt'],
+        'supports'           => ['title', 'thumbnail', 'excerpt', 'editor'],
         'menu_icon'          => 'dashicons-building',
         'show_in_rest'       => true,
     ];
@@ -71,6 +71,10 @@ function edimsrl_register_cpt_lavori() {
     register_post_type('lavori', $args);
 }
 add_action('init', 'edimsrl_register_cpt_lavori');
+add_filter('use_block_editor_for_post_type', function($enabled, $post_type) {
+    if ($post_type === 'lavori') return true;
+    return $enabled;
+}, 10, 2);
 
 // Tassonomia: Categoria Lavori
 function edimsrl_register_tax_lavori() {
@@ -87,7 +91,7 @@ function edimsrl_register_tax_lavori() {
     register_taxonomy('categoria_lavori', ['lavori'], [
         'labels'       => $labels,
         'hierarchical' => true,
-        'rewrite'      => ['slug' => 'portfolio-lavori'],
+        'rewrite'      => ['slug' => 'categoria-lavori'],
         'show_in_rest' => true,
     ]);
 }
