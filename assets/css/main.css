@@ -1100,3 +1100,85 @@ p {
   color: var(--color-primary);
   text-decoration: underline;
 }
+/* =============================================
+   FOOTER CONTATTI — nuovo markup pulito
+   ============================================= */
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.footer-contact-item__icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  line-height: 1.6;
+}
+
+.footer-contact-item__text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-contact-item__text strong {
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.footer-contact-item__text span,
+.footer-contact-item__text a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-contact-item__text a:hover {
+  color: var(--color-primary);
+}
+
+/* =============================================
+   FOOTER — centratura mobile
+   ============================================= */
+@media (max-width: 768px) {
+  .footer-grid {
+    text-align: center;
+  }
+
+  .footer-col--brand,
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-col ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .footer-col--contatti .footer-contact-item {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-desc {
+    max-width: 320px;
+  }
+}

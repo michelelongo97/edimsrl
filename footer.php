@@ -6,7 +6,7 @@
         <div class="footer-grid">
 
             <!-- Col 1: Brand -->
-            <div class="footer-col">
+            <div class="footer-col footer-col--brand">
                 <div class="footer-logo">
                     <?php if (has_custom_logo()) : ?>
                         <?php the_custom_logo(); ?>
@@ -26,7 +26,7 @@
                     <a href="#" aria-label="Instagram">ig</a>
                 </div>
                 ============================================= -->
-                
+
             </div>
 
             <!-- Col 2: Link rapidi -->
@@ -42,24 +42,49 @@
             </div>
 
             <!-- Col 3: Contatti -->
-            <div class="footer-col">
+            <div class="footer-col footer-col--contatti">
                 <h4>Contatti</h4>
-                <ul>
-                    <li>📍 Via Palermo n. 87, Gravina in P. (BA)</li>
-                    <li style="margin-top:10px;">📞 <a href="tel:0803256799">080 3256799</a></li>
-                    <li style="margin-top:10px;">✉️ <a href="mailto:info@edimsrl.it">info@edimsrl.it</a></li>
-                </ul>
+
+                <div class="footer-contact-item">
+                    <span class="footer-contact-item__icon">📍</span>
+                    <div class="footer-contact-item__text">
+                        <strong>Sede Legale</strong>
+                        <span>Via Discesa Casale n. 25<br>Gravina in Puglia (BA)</span>
+                    </div>
+                </div>
+
+                <div class="footer-contact-item">
+                    <span class="footer-contact-item__icon">📍</span>
+                    <div class="footer-contact-item__text">
+                        <strong>Uffici</strong>
+                        <span>Via Palermo n. 87<br>Gravina in Puglia (BA)</span>
+                    </div>
+                </div>
+
+                <div class="footer-contact-item">
+                    <span class="footer-contact-item__icon">📞</span>
+                    <div class="footer-contact-item__text">
+                        <a href="tel:0803256799">080 3256799</a>
+                    </div>
+                </div>
+
+                <div class="footer-contact-item">
+                    <span class="footer-contact-item__icon">✉️</span>
+                    <div class="footer-contact-item__text">
+                        <a href="mailto:info@edimsrl.it">info@edimsrl.it</a>
+                    </div>
+                </div>
             </div>
 
         </div>
 
         <div class="footer-bottom">
-            <span>&copy; <?php echo date('Y'); ?> EDIM Srl — P.IVA 06562950722</span>
+            <span>&copy; <?php echo date('Y'); ?> EDIM Srl | P.IVA 06562950722</span>
             <span>
                 <a href="<?php echo home_url('/privacy-policy'); ?>">Privacy Policy</a> &nbsp;|&nbsp;
                 <a href="<?php echo home_url('/cookie-policy'); ?>">Cookie Policy</a>
             </span>
-            
+
         </div>
 
     </div>
