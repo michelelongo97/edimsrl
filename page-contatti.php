@@ -57,6 +57,45 @@ get_header(); ?>
 
         </div>
 
+        <!-- Referenti -->
+        <div class="section__header" style="margin-top: 64px;">
+            <h2 class="section__title">I Nostri Referenti</h2>
+        </div>
+        <div class="cert-grid" style="margin-bottom: 64px;">
+            <div class="cert-card">
+                <div class="cert-card__icon">👤</div>
+                <div>
+                    <h3 class="cert-card__title">Rag. Gennaro Stefanelli</h3>
+                    <p class="cert-card__desc">Amministratore Unico</p>
+                    <p class="cert-card__desc"><a href="tel:+393665089564">+39 366 5089564</a><br><a href="mailto:gennarostefanelli@edimsrl.it">gennarostefanelli@edimsrl.it</a></p>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-card__icon">👤</div>
+                <div>
+                    <h3 class="cert-card__title">Geom. Vito Denora</h3>
+                    <p class="cert-card__desc">Direttore Tecnico</p>
+                    <p class="cert-card__desc"><a href="tel:+393880576661">+39 388 0576661</a><br><a href="mailto:vitodenora@edimsrl.it">vitodenora@edimsrl.it</a></p>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-card__icon">👤</div>
+                <div>
+                    <h3 class="cert-card__title">Michele Di Padova</h3>
+                    <p class="cert-card__desc">Direttore Tecnico</p>
+                    <p class="cert-card__desc"><a href="tel:+393880577083">+39 388 0577083</a><br><a href="mailto:micheledipadova@edimsrl.it">micheledipadova@edimsrl.it</a></p>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-card__icon">👤</div>
+                <div>
+                    <h3 class="cert-card__title">Arch. Antonio Di Padova</h3>
+                    <p class="cert-card__desc">Responsabile Tecnico</p>
+                    <p class="cert-card__desc"><a href="tel:+393461868264">+39 346 1868264</a><br><a href="mailto:antonio.dipadova@outlook.com">antonio.dipadova@outlook.com</a></p>
+                </div>
+            </div>
+        </div>
+
         <!-- Mappa Google -->
         <div class="map-wrapper">
             <iframe

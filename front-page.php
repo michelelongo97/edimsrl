@@ -12,7 +12,7 @@
                 <span>un'opera alla volta</span>
             </h1>
             <p class="hero__text">
-                EDIM Srl è specializzata in opere edili, stradali e installazione impianti.
+                EDIM Srl è specializzata in opere edili, stradali, installazione impianti e ristrutturazioni private.
                 Qualità certificata, esperienza pluriennale e affidabilità in ogni progetto.
             </p>
             <div class="hero__actions">
@@ -38,7 +38,7 @@
                 <div class="stat-item__label">Anni di Esperienza</div>
             </div>
             <div class="stat-item">
-                <div class="stat-item__number">4</div>
+                <div class="stat-item__number">6</div>
                 <div class="stat-item__label">Categorie SOA</div>
             </div>
             <div class="stat-item">
@@ -71,8 +71,8 @@
             </div>
             <div class="servizio-card">
                 <div class="servizio-card__icon">⚡</div>
-                <h3 class="servizio-card__title">Impianti (OG6 / OG10)</h3>
-                <p class="servizio-card__text">Installazione e manutenzione di impianti idraulici, elettrici e tecnologici.</p>
+                <h3 class="servizio-card__title">Impianti (OG6 / OG10 / OG11 / OS30)</h3>
+                <p class="servizio-card__text">Installazione e manutenzione di impianti idraulici, elettrici, tecnologici e di comunicazione.</p>
             </div>
         </div>
     </div>
@@ -142,7 +142,7 @@
             </div>
             <div class="chisiamo-content">
                 <h2 class="section__title">Chi Siamo</h2>
-                <p>EDIM Srl opera nel settore delle costruzioni dal 2007, con sede a Gravina in Puglia. La nostra azienda è qualificata SOA nelle categorie OG1, OG3, OG6 e OG10.</p>
+                <p>EDIM Srl opera nel settore delle costruzioni dal 2007, con sede a Gravina in Puglia. La nostra azienda è qualificata SOA nelle categorie OG1, OG3, OG6, OG10, OG11 e OS30.</p>
                 <p>Ogni progetto viene seguito con la massima cura e professionalità, garantendo rispetto dei tempi, sicurezza e qualità dei materiali.</p>
                 <a href="<?php echo home_url('/chi-siamo'); ?>" class="btn btn--primary" style="margin-top:8px;">Scopri di più</a>
             </div>

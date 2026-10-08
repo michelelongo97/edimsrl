@@ -14,7 +14,7 @@ function edimsrl_scripts() {
     );
 
     // Theme stylesheet
-    wp_enqueue_style('edimsrl-style', get_template_directory_uri() . '/assets/css/main.css', ['edimsrl-fonts'], '1.0.0');
+    wp_enqueue_style('edimsrl-style', get_template_directory_uri() . '/assets/css/main.css', ['edimsrl-fonts'], '1.0.1');
 
     // Main JS
     wp_enqueue_script('edimsrl-main', get_template_directory_uri() . '/assets/js/main.js', [], '1.0.0', true);
