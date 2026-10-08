@@ -52,7 +52,11 @@ get_header(); ?>
 
             <!-- Form CF7 -->
             <div class="contatti-form">
-                <?php echo do_shortcode('[contact-form-7 id="INSERISCI_ID" title="Preventivo EDIM"]'); ?>
+                <?php if (shortcode_exists('contact-form-7')) : ?>
+                    <?php echo do_shortcode('[contact-form-7 id="3d45ca5" title="Modulo di contatto 1"]'); ?>
+                <?php else : ?>
+                    <p style="color: var(--color-gray);">Modulo di contatto in configurazione.</p>
+                <?php endif; ?>
             </div>
 
         </div>
