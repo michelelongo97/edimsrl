@@ -4,6 +4,7 @@
    HERO
    ============================================= -->
 <section class="hero">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-cassa-edile-2026.png" alt="Bollino Cassa Edile Awards 2026" class="hero__award">
     <div class="container">
         <div class="hero__content">
             <span class="hero__tag">Gravina in Puglia (BA)</span>
@@ -145,6 +146,28 @@
                 <p>EDIM Srl opera nel settore delle costruzioni dal 2007, con sede a Gravina in Puglia. La nostra azienda è qualificata SOA nelle categorie OG1, OG3, OG6, OG10, OG11 e OS30.</p>
                 <p>Ogni progetto viene seguito con la massima cura e professionalità, garantendo rispetto dei tempi, sicurezza e qualità dei materiali.</p>
                 <a href="<?php echo home_url('/chi-siamo'); ?>" class="btn btn--primary" style="margin-top:8px;">Scopri di più</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+   RICONOSCIMENTI
+   ============================================= -->
+<section class="section section--light">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title">I Nostri Riconoscimenti</h2>
+            <p class="section__subtitle">Premiati dalla Cassa Edile della Provincia di Bari per il comportamento virtuoso dell'azienda</p>
+        </div>
+        <div class="awards-grid">
+            <div class="award-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-cassa-edile-2026.png" alt="Cassa Edile Awards 2026">
+                <p class="award-item__caption">Cassa Edile Awards 2026</p>
+            </div>
+            <div class="award-item">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-top-player-2025.png" alt="Cassa Edile Awards 2025 - Top Player Impresa">
+                <p class="award-item__caption">Top Player Impresa 2025</p>
             </div>
         </div>
     </div>

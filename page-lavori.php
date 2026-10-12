@@ -4,7 +4,7 @@
  */
 get_header(); ?>
 
-<section class="section section--light" style="padding-top: 64px;">
+<section class="section section--light">
     <div class="container">
         <div class="section__header">
             <h1 class="section__title">I Nostri Lavori</h1>

@@ -14,7 +14,7 @@
   --font-body: "Open Sans", sans-serif;
 
   --container-width: 1200px;
-  --header-height: 80px;
+  --header-height: 96px;
 
   --radius: 4px;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -175,7 +175,7 @@ p {
 }
 
 .site-logo img {
-  height: 50px;
+  height: 72px;
   width: auto;
 }
 
@@ -187,7 +187,7 @@ p {
 }
 
 .custom-logo {
-  height: 80px;
+  height: 72px;
   width: auto;
 }
 
@@ -267,7 +267,7 @@ p {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(135deg, rgba(26, 46, 74, 0.88), rgba(26, 46, 74, 0.7)),
+    linear-gradient(135deg, rgba(26, 46, 74, 0.6), rgba(26, 46, 74, 0.4)),
     url("../images/hero-bg.jpg") center/cover no-repeat;
 }
 
@@ -294,6 +294,7 @@ p {
 .hero__title {
   color: var(--color-white);
   margin-bottom: 24px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .hero__title span {
@@ -301,15 +302,74 @@ p {
 }
 
 .hero__text {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.92);
   font-size: 1.1rem;
   margin-bottom: 40px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero__actions {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+.hero__award {
+  position: absolute;
+  top: calc(var(--header-height) + 32px);
+  right: 48px;
+  width: 110px;
+  z-index: 2;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 992px) {
+  .hero__award {
+    width: 80px;
+    right: 24px;
+    top: calc(var(--header-height) + 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__award {
+    display: none;
+  }
+}
+
+/* =============================================
+   RICONOSCIMENTI
+   ============================================= */
+.awards-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.award-item {
+  text-align: center;
+  max-width: 160px;
+}
+
+.award-item img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.award-item img:hover {
+  transform: translateY(-4px);
+}
+
+.award-item__caption {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-secondary);
 }
 
 /* =============================================

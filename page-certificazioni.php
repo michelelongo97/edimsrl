@@ -57,17 +57,22 @@ get_header(); ?>
             </div>
         </div>
 
-        <!-- Certificazioni da CPT (ACF) -->
-        <?php
-        $certs = new WP_Query([
-            'post_type'      => 'certificazioni',
-            'posts_per_page' => -1,
-            'orderby'        => 'menu_order',
-            'order'          => 'ASC',
-        ]);
+    </div>
+</section>
 
-        if ($certs->have_posts()) : ?>
-        <div class="section__header" style="margin-top: 0;">
+<!-- Certificazioni da CPT (ACF) -->
+<?php
+$certs = new WP_Query([
+    'post_type'      => 'certificazioni',
+    'posts_per_page' => -1,
+    'orderby'        => 'menu_order',
+    'order'          => 'ASC',
+]);
+
+if ($certs->have_posts()) : ?>
+<section class="section section--light">
+    <div class="container">
+        <div class="section__header">
             <h2 class="section__title">Documenti e Attestati</h2>
         </div>
         <div class="cert-grid">
@@ -91,9 +96,8 @@ get_header(); ?>
             </div>
             <?php endwhile; wp_reset_postdata(); ?>
         </div>
-        <?php endif; ?>
-
     </div>
 </section>
+<?php endif; ?>
 
 <?php get_footer(); ?>
