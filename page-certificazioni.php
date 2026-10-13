@@ -77,6 +77,14 @@ $certs = new WP_Query([
         <div class="cert-grid">
 
             <div class="cert-card">
+                <div class="cert-card__icon">📜</div>
+                <div>
+                    <h3 class="cert-card__title">Attestazione SOA</h3>
+                    <p class="cert-card__desc">N. 102932/7/00 del 07/05/2026, rilasciata da Attesta Organismo di Attestazione</p>
+                    <a href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestazione-soa-edim.pdf" class="cert-card__link" target="_blank" rel="noopener" download>📥 Scarica PDF</a>
+                </div>
+            </div>
+            <div class="cert-card">
                 <div class="cert-card__icon">🏆</div>
                 <div>
                     <h3 class="cert-card__title">Cassa Edile Awards 2026</h3>
