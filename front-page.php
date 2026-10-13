@@ -162,12 +162,18 @@
         </div>
         <div class="awards-grid">
             <div class="award-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-cassa-edile-2026.png" alt="Cassa Edile Awards 2026">
+                <a href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-cassa-edile-awards-2026.pdf" target="_blank" rel="noopener">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-cassa-edile-2026.png" alt="Cassa Edile Awards 2026">
+                </a>
                 <p class="award-item__caption">Cassa Edile Awards 2026</p>
+                <a class="cert-card__link" href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-cassa-edile-awards-2026.pdf" download>📥 Scarica PDF</a>
             </div>
             <div class="award-item">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-top-player-2025.png" alt="Cassa Edile Awards 2025 - Top Player Impresa">
+                <a href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-top-player-2025.pdf" target="_blank" rel="noopener">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-top-player-2025.png" alt="Cassa Edile Awards 2025 - Top Player Impresa">
+                </a>
                 <p class="award-item__caption">Top Player Impresa 2025</p>
+                <a class="cert-card__link" href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-top-player-2025.pdf" download>📥 Scarica PDF</a>
             </div>
         </div>
     </div>

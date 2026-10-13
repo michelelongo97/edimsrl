@@ -60,7 +60,7 @@ get_header(); ?>
     </div>
 </section>
 
-<!-- Certificazioni da CPT (ACF) -->
+<!-- Documenti e attestati: premi (fissi) + certificazioni da CPT (ACF) -->
 <?php
 $certs = new WP_Query([
     'post_type'      => 'certificazioni',
@@ -68,15 +68,32 @@ $certs = new WP_Query([
     'orderby'        => 'menu_order',
     'order'          => 'ASC',
 ]);
-
-if ($certs->have_posts()) : ?>
+?>
 <section class="section section--light">
     <div class="container">
         <div class="section__header">
             <h2 class="section__title">Documenti e Attestati</h2>
         </div>
         <div class="cert-grid">
-            <?php while ($certs->have_posts()) : $certs->the_post();
+
+            <div class="cert-card">
+                <div class="cert-card__icon">🏆</div>
+                <div>
+                    <h3 class="cert-card__title">Cassa Edile Awards 2026</h3>
+                    <p class="cert-card__desc">Bollino conferito dalla Cassa Edile della Provincia di Bari</p>
+                    <a href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-cassa-edile-awards-2026.pdf" class="cert-card__link" target="_blank" rel="noopener" download>📥 Scarica PDF</a>
+                </div>
+            </div>
+            <div class="cert-card">
+                <div class="cert-card__icon">🏆</div>
+                <div>
+                    <h3 class="cert-card__title">Top Player Impresa 2025</h3>
+                    <p class="cert-card__desc">Cassa Edile Awards 2025, attestato della Cassa Edile della Provincia di Bari</p>
+                    <a href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-top-player-2025.pdf" class="cert-card__link" target="_blank" rel="noopener" download>📥 Scarica PDF</a>
+                </div>
+            </div>
+
+            <?php if ($certs->have_posts()) : while ($certs->have_posts()) : $certs->the_post();
                 $file_pdf = get_field('file_pdf');
                 $ente     = get_field('ente_rilasciante') ?: '';
             ?>
@@ -88,16 +105,16 @@ if ($certs->have_posts()) : ?>
                         <p class="cert-card__desc">Rilasciato da: <?php echo esc_html($ente); ?></p>
                     <?php endif; ?>
                     <?php if ($file_pdf) : ?>
-                        <a href="<?php echo esc_url($file_pdf); ?>" class="cert-card__link" target="_blank" rel="noopener">
+                        <a href="<?php echo esc_url($file_pdf); ?>" class="cert-card__link" target="_blank" rel="noopener" download>
                             📥 Scarica PDF
                         </a>
                     <?php endif; ?>
                 </div>
             </div>
-            <?php endwhile; wp_reset_postdata(); ?>
+            <?php endwhile; wp_reset_postdata(); endif; ?>
+
         </div>
     </div>
 </section>
-<?php endif; ?>
 
 <?php get_footer(); ?>
