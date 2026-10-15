@@ -4,7 +4,15 @@
    HERO
    ============================================= -->
 <section class="hero">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-cassa-edile-2026.png" alt="Bollino Cassa Edile Awards 2026" class="hero__award">
+    <div class="hero__brand">
+        <?php if (has_custom_logo()) : ?>
+            <?php the_custom_logo(); ?>
+        <?php else : ?>
+            <strong style="font-family:var(--font-main);font-size:1.6rem;color:var(--color-secondary);"><?php bloginfo('name'); ?></strong>
+        <?php endif; ?>
+        <span class="hero__brand-divider" aria-hidden="true"></span>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-cassa-edile-2026.png" alt="Bollino Cassa Edile Awards 2026" class="hero__award">
+    </div>
     <div class="container">
         <div class="hero__content">
             <span class="hero__tag">Gravina in Puglia (BA)</span>

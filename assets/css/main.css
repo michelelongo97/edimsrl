@@ -14,7 +14,7 @@
   --font-body: "Open Sans", sans-serif;
 
   --container-width: 1200px;
-  --header-height: 96px;
+  --header-height: 80px;
 
   --radius: 4px;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -175,7 +175,7 @@ p {
 }
 
 .site-logo img {
-  height: 72px;
+  height: 50px;
   width: auto;
 }
 
@@ -314,26 +314,62 @@ p {
   flex-wrap: wrap;
 }
 
-.hero__award {
+/* Riquadro bianco in alto a destra: logo EDIM grande + bollino Awards */
+.hero__brand {
   position: absolute;
   top: calc(var(--header-height) + 32px);
   right: 48px;
-  width: 110px;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 28px;
+  background: var(--color-white);
   border-radius: var(--radius);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.hero__brand .custom-logo-link {
+  display: block;
+  line-height: 0;
+}
+
+.hero__brand .custom-logo {
+  height: 104px;
+  width: auto;
+}
+
+.hero__brand-divider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--color-border);
+}
+
+.hero__award {
+  display: block;
+  height: 112px;
+  width: auto;
 }
 
 @media (max-width: 992px) {
-  .hero__award {
-    width: 80px;
+  .hero__brand {
     right: 24px;
     top: calc(var(--header-height) + 20px);
+    gap: 16px;
+    padding: 12px 18px;
+  }
+
+  .hero__brand .custom-logo {
+    height: 68px;
+  }
+
+  .hero__award {
+    height: 74px;
   }
 }
 
 @media (max-width: 576px) {
-  .hero__award {
+  .hero__brand {
     display: none;
   }
 }
@@ -377,6 +413,8 @@ p {
    ============================================= */
 .btn {
   display: inline-block;
+  text-align: center;
+  line-height: 1.3;
   font-family: var(--font-main);
   font-weight: 600;
   font-size: 0.9rem;
@@ -677,6 +715,20 @@ p {
   border-radius: 50%;
   background: rgba(245, 166, 35, 0.12);
   margin-bottom: 4px;
+}
+
+.cert-card__badge {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.cert-card__badge img {
+  height: 112px;
+  width: auto;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
 }
 
 .cert-card__title {

@@ -60,7 +60,7 @@ get_header(); ?>
     </div>
 </section>
 
-<!-- Documenti e attestati: premi (fissi) + certificazioni da CPT (ACF) -->
+<!-- Documenti e attestati: SOA (fissa) + certificazioni da CPT (ACF) -->
 <?php
 $certs = new WP_Query([
     'post_type'      => 'certificazioni',
@@ -84,22 +84,6 @@ $certs = new WP_Query([
                     <a href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestazione-soa-edim.pdf" class="cert-card__link" target="_blank" rel="noopener" download>📥 Scarica PDF</a>
                 </div>
             </div>
-            <div class="cert-card">
-                <div class="cert-card__icon">🏆</div>
-                <div>
-                    <h3 class="cert-card__title">Cassa Edile Awards 2026</h3>
-                    <p class="cert-card__desc">Bollino conferito dalla Cassa Edile della Provincia di Bari</p>
-                    <a href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-cassa-edile-awards-2026.pdf" class="cert-card__link" target="_blank" rel="noopener" download>📥 Scarica PDF</a>
-                </div>
-            </div>
-            <div class="cert-card">
-                <div class="cert-card__icon">🏆</div>
-                <div>
-                    <h3 class="cert-card__title">Top Player Impresa 2025</h3>
-                    <p class="cert-card__desc">Cassa Edile Awards 2025, attestato della Cassa Edile della Provincia di Bari</p>
-                    <a href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-top-player-2025.pdf" class="cert-card__link" target="_blank" rel="noopener" download>📥 Scarica PDF</a>
-                </div>
-            </div>
 
             <?php if ($certs->have_posts()) : while ($certs->have_posts()) : $certs->the_post();
                 $file_pdf = get_field('file_pdf');
@@ -121,6 +105,38 @@ $certs = new WP_Query([
             </div>
             <?php endwhile; wp_reset_postdata(); endif; ?>
 
+        </div>
+    </div>
+</section>
+
+<!-- Riconoscimenti -->
+<section class="section">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title">Riconoscimenti</h2>
+            <p class="section__subtitle">I premi conferiti ad EDIM dalla Cassa Edile della Provincia di Bari</p>
+        </div>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <a class="cert-card__badge" href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-cassa-edile-awards-2026.pdf" target="_blank" rel="noopener">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-cassa-edile-2026.png" alt="Cassa Edile Awards 2026">
+                </a>
+                <div>
+                    <h3 class="cert-card__title">Cassa Edile Awards 2026</h3>
+                    <p class="cert-card__desc">Bollino Cassa Edile Awards 2026</p>
+                    <a href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-cassa-edile-awards-2026.pdf" class="cert-card__link" target="_blank" rel="noopener" download>📥 Scarica PDF</a>
+                </div>
+            </div>
+            <div class="cert-card">
+                <a class="cert-card__badge" href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-top-player-2025.pdf" target="_blank" rel="noopener">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/award-top-player-2025.png" alt="Cassa Edile Awards 2025 - Top Player Impresa">
+                </a>
+                <div>
+                    <h3 class="cert-card__title">Top Player Impresa 2025</h3>
+                    <p class="cert-card__desc">Cassa Edile Awards 2025, categoria Top Player Impresa</p>
+                    <a href="<?php echo get_template_directory_uri(); ?>/assets/docs/attestato-top-player-2025.pdf" class="cert-card__link" target="_blank" rel="noopener" download>📥 Scarica PDF</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
