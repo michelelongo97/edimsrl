@@ -20,28 +20,15 @@ get_header(); ?>
     </div>
 </section>
 
-<!-- Impianti Tecnologici Integrati (OG11 / OS30) -->
+<!-- Qualifiche e certificazioni (rimando alla pagina dedicata) -->
 <section class="section section--light">
     <div class="container">
         <div class="section__header">
-            <h2 class="section__title">Impianti Tecnologici Integrati</h2>
-            <p class="section__subtitle">Le nostre qualifiche più recenti: OG11 e OS30</p>
+            <h2 class="section__title">Qualifiche e Certificazioni</h2>
+            <p class="section__subtitle">Attestazione SOA nelle categorie OG1, OG3, OG6, OG10, OG11 e OS30, e i riconoscimenti ottenuti negli anni</p>
         </div>
-        <div class="cert-grid" style="margin-bottom: 40px;">
-            <div class="cert-card">
-                <div class="cert-card__icon">🖥️</div>
-                <div>
-                    <h3 class="cert-card__title">OG11 | Impianti Tecnologici Integrati</h3>
-                    <p class="cert-card__desc">Fornitura, installazione, gestione e manutenzione di impianti tecnologici integrati.</p>
-                </div>
-            </div>
-            <div class="cert-card">
-                <div class="cert-card__icon">📡</div>
-                <div>
-                    <h3 class="cert-card__title">OS30 | Impianti Elettrici, Telefonici, Radiotelefonici e Televisivi</h3>
-                    <p class="cert-card__desc">Fornitura e posa in opera di impianti elettrici civili e industriali, sistemi di comunicazione, impianti radiotelevisivi, rete dati e di sicurezza di interni.</p>
-                </div>
-            </div>
+        <div style="text-align:center; margin-bottom: 40px;">
+            <a href="<?php echo esc_url(home_url('/certificazioni/')); ?>" class="btn btn--primary">Vedi tutte le certificazioni</a>
         </div>
         <div class="chisiamo-cantiere-grid">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/chisiamo-cantiere-1.jpg" alt="Cantiere EDIM Srl">

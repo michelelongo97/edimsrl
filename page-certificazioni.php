@@ -16,42 +16,42 @@ get_header(); ?>
             <div class="cert-card">
                 <div class="cert-card__icon">🏗️</div>
                 <div>
-                    <h3 class="cert-card__title">OG1 — Edifici Civili e Industriali</h3>
+                    <h3 class="cert-card__title">OG1 - Edifici Civili e Industriali</h3>
                     <p class="cert-card__desc">Costruzione, manutenzione e ristrutturazione di edifici e manufatti civili.</p>
                 </div>
             </div>
             <div class="cert-card">
                 <div class="cert-card__icon">🛣️</div>
                 <div>
-                    <h3 class="cert-card__title">OG3 — Strade, Autostrade, Ponti</h3>
+                    <h3 class="cert-card__title">OG3 - Strade, Autostrade, Ponti</h3>
                     <p class="cert-card__desc">Opere stradali, autostradali, ponti, viadotti e opere infrastrutturali.</p>
                 </div>
             </div>
             <div class="cert-card">
                 <div class="cert-card__icon">🔧</div>
                 <div>
-                    <h3 class="cert-card__title">OG6 — Acquedotti, Gasdotti, Fognature</h3>
+                    <h3 class="cert-card__title">OG6 - Acquedotti, Gasdotti, Fognature</h3>
                     <p class="cert-card__desc">Impianti idrici, gasdotti, fognature e opere di distribuzione fluidi.</p>
                 </div>
             </div>
             <div class="cert-card">
                 <div class="cert-card__icon">⚡</div>
                 <div>
-                    <h3 class="cert-card__title">OG10 — Impianti per la Trasformazione</h3>
+                    <h3 class="cert-card__title">OG10 - Impianti per la Trasformazione</h3>
                     <p class="cert-card__desc">Impianti elettrici, elettromeccanici e per la produzione di energia.</p>
                 </div>
             </div>
             <div class="cert-card">
                 <div class="cert-card__icon">🖥️</div>
                 <div>
-                    <h3 class="cert-card__title">OG11 — Impianti Tecnologici Integrati</h3>
+                    <h3 class="cert-card__title">OG11 - Impianti Tecnologici Integrati</h3>
                     <p class="cert-card__desc">Fornitura, installazione, gestione e manutenzione di impianti tecnologici integrati.</p>
                 </div>
             </div>
             <div class="cert-card">
                 <div class="cert-card__icon">📡</div>
                 <div>
-                    <h3 class="cert-card__title">OS30 — Impianti Elettrici, Telefonici, Radiotelefonici e Televisivi</h3>
+                    <h3 class="cert-card__title">OS30 - Impianti Elettrici, Telefonici, Radiotelefonici e Televisivi</h3>
                     <p class="cert-card__desc">Fornitura e posa in opera di impianti elettrici civili e industriali, sistemi di comunicazione, impianti radiotelevisivi, rete dati e di sicurezza di interni.</p>
                 </div>
             </div>
